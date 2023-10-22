@@ -1,4 +1,5 @@
-public class ModCard: Card
+using System;
+[Serializable]public class ModCard: Card
 {
     
 }

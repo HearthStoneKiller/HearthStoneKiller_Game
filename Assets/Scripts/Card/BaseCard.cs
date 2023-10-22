@@ -1,4 +1,5 @@
-public class BaseCard: Card
+using System;
+[Serializable]public class BaseCard: Card
 {
 
 }

@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
-
-public class BaseDeck : DeckCore
+using UnityEngine;
+public class BaseDeck : MonoBehaviour
 {
-    private List<BaseCard> baseCards;
+    [Header("Cards")]
+    [SerializeField]private List<BaseCard> baseCards = new List<BaseCard>();
     public BaseDeck()
     {
         baseCards = new List<BaseCard>();
     }
 
-    public override bool AddCard(Card card)
+    public bool AddCard(Card card)
     {
         if (card.GetType() == typeof(BaseCard))
         {
@@ -22,7 +23,7 @@ public class BaseDeck : DeckCore
         }
     }
 
-    public override bool RemoveCard(Card card)
+    public bool RemoveCard(Card card)
     {
         if (card.GetType() == typeof(BaseCard))
         {
@@ -32,11 +33,11 @@ public class BaseDeck : DeckCore
         return false;
     }
 
-    public override void Shuffle()
+    public void Shuffle()
     {
         
     }
-    public override void Clear()
+    public void Clear()
     {
         baseCards = new List<BaseCard>();
     }

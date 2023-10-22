@@ -1,10 +1,7 @@
-public class Deck
+using System;
+using UnityEngine;
+[Serializable]public class Deck : MonoBehaviour
 {
-    protected BaseDeck baseDeck;
-    protected ModDeck modDeck;
-    public Deck()
-    {
-        baseDeck = new BaseDeck();
-        modDeck = new ModDeck();
-    }
+    [SerializeField]private BaseDeck baseDeck = new BaseDeck();
+    [SerializeField]private ModDeck modDeck = new ModDeck();
 }

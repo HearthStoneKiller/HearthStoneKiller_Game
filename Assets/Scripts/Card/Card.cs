@@ -1,4 +1,5 @@
-public class Card
+using System;
+[Serializable]public class Card
 {
     public Card()
     {
