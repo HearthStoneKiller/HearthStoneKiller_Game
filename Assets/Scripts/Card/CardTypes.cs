@@ -15,6 +15,8 @@ public enum SpellCardEffectTypes
 public enum SpellCardTargetTypes
 {
     NO_TARGET,
+    YOUR_TARGET,
+    ENEMY_TARGET,
     YOUR_CARD_TARGET,
     ENEMY_CARD_TARGET,
     ALLYOUR_CARD_TARGET,
