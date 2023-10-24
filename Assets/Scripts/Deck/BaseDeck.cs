@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-public class BaseDeck : MonoBehaviour
+[Serializable]public class BaseDeck : MonoBehaviour
 {
     [Header("Cards")]
     [SerializeField]private List<BaseCard> baseCards = new List<BaseCard>();
@@ -9,12 +9,28 @@ public class BaseDeck : MonoBehaviour
     {
         baseCards = new List<BaseCard>();
     }
-
+    public int GetCount()
+    {
+        return baseCards.Count;
+    }
+    public BaseCard GetCard(int index)
+    {
+        if (index < 0 || index >= baseCards.Count)
+        {
+            throw new IndexOutOfRangeException();
+        }
+        return baseCards[index];
+    }
     public bool AddCard(Card card)
     {
-        if (card.GetType() == typeof(BaseCard))
+        if (card.GetType() == typeof(CreatureCard))
         {
-            baseCards.Add((BaseCard)card);
+            baseCards.Add((CreatureCard)card);
+            return true;
+        }
+        else if (card.GetType() == typeof(SpellCard))
+        {
+            baseCards.Add((SpellCard)card);
             return true;
         }
         else
@@ -22,7 +38,6 @@ public class BaseDeck : MonoBehaviour
             throw new Exception("Error! Imported object type is not BaseCard");
         }
     }
-
     public bool RemoveCard(Card card)
     {
         if (card.GetType() == typeof(BaseCard))
@@ -32,7 +47,6 @@ public class BaseDeck : MonoBehaviour
         }
         return false;
     }
-
     public void Shuffle()
     {
         

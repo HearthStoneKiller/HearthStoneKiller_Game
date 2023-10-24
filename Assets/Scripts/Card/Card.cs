@@ -1,8 +1,9 @@
 using System;
+using UnityEngine;
 [Serializable]public class Card
 {
-    private string name;
-    private string description;
+    [SerializeField]protected string name;
+    [SerializeField]protected string description;
     public Card(string name)
     {
         this.name = name;
@@ -15,5 +16,17 @@ using System;
     public string GetDescription()
     {
         return description;
+    }
+    public bool Equals(Card card)
+    {
+        if (card == null)
+        {
+            return false;
+        }
+        if (this.name == card.GetName())
+        {
+            return true;
+        }
+        return false;
     }
 }

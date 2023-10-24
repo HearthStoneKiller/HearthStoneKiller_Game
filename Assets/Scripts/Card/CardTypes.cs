@@ -23,3 +23,13 @@ public enum SpellCardTargetTypes
     ALLENEMY_CARD_TARGET,
     ALL_CARD_TARGET
 }
+public enum ParametersTypes
+{
+    NO_PARAMETER,
+    POISON,
+    SHIELD
+}
+public enum PropertyTypes
+{
+
+}

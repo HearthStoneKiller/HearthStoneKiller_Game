@@ -1,18 +1,20 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+[Serializable]public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]private string id;
+    [SerializeField]private string playerName;
+    [SerializeField]private Deck deck;
+    [SerializeField]private Hand hand;
+    [SerializeField]private Table table;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

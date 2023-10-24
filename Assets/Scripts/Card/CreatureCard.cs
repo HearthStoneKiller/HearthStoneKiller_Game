@@ -1,14 +1,17 @@
-public class CreatureCard: BaseCard
+using System;
+using UnityEngine;
+
+[Serializable]public class CreatureCard: BaseCard
 {
-    private ParametersCard parametersCard;
+    [SerializeField]private ParametersCard parametersCard;
     private PropertyCard propertyCard;
     public CreatureCard(string name, ParametersCard parametersCard, PropertyCard propertyCard): base(name)
     {
         this.parametersCard = parametersCard;
         this.propertyCard = propertyCard;
     }
-    public CreatureCard(string name, int maxHealth, int attackDamage): base(name)
+    public CreatureCard(string name, int maxHealth, int attackDamage, string parametersTypes): base(name)
     {
-        this.parametersCard = new ParametersCard("", maxHealth, attackDamage);
+        this.parametersCard = new ParametersCard("", maxHealth, attackDamage, parametersTypes);
     }
 }

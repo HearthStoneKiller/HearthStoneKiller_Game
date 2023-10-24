@@ -1,21 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [Serializable]public class Game : MonoBehaviour
 {
-    [SerializeField]private Player firstPlayer = new Player();
-    [SerializeField]private Table firstPlayerTable = new Table();
-    [SerializeField]private Player secondPlayer = new Player();
-    [SerializeField]private Table secondPlayerTable = new Table();
-    // Start is called before the first frame update
+    [SerializeField]private Player firstPlayer;
+    [SerializeField]private Table firstPlayerTable;
+    [SerializeField]private Player secondPlayer;
+    [SerializeField]private Table secondPlayerTable;
     void Start()
     {
-        
-    }
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(51));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(101));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(151));
 
-    // Update is called once per frame
+        secondPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1));
+    }
     void Update()
     {
         
