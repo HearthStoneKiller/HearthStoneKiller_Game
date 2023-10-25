@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[Serializable]public class PlayerTableViewer : MonoBehaviour
+[Serializable]public class EnemyTableViewer : MonoBehaviour
 {
-    [SerializeField]private Table playerTable;
+    [SerializeField]private Table enemyTable;
     void Start()
     {
         

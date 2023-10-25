@@ -1,16 +1,15 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDeckViewer : MonoBehaviour
+[Serializable]public class PlayerDeckViewer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]private Deck playerDeck;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         

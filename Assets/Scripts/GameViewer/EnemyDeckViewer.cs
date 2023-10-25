@@ -1,17 +1,15 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-[Serializable]public class PlayerHandViewer : MonoBehaviour
+[Serializable]public class EnemyDeckViewer : MonoBehaviour
 {
-    [SerializeField]private Hand playerHand;
+    [SerializeField]private Deck enemyDeck;
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         
