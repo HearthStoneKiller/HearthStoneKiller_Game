@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ParametersCard
       objectReference: {fileID: 0}
+    - target: {fileID: 5946703532458589917, guid: 044cd6efa73d4f94d903d98d5cd6712d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6199920696655715848, guid: 044cd6efa73d4f94d903d98d5cd6712d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.1

@@ -59,9 +59,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: CreatureCard
       objectReference: {fileID: 0}
+    - target: {fileID: 5946703532458589917, guid: 044cd6efa73d4f94d903d98d5cd6712d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6199920696655715848, guid: 044cd6efa73d4f94d903d98d5cd6712d, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7253452271021952502, guid: 044cd6efa73d4f94d903d98d5cd6712d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 859a6198d14722245a927496a63c287f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 044cd6efa73d4f94d903d98d5cd6712d, type: 3}
