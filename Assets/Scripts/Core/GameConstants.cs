@@ -5,7 +5,13 @@ public static class DeckConstants
     public static int MaxNumberOfBaseCardsRepeats = 4;
     public static int MaxNumberOfModCardsRepeats = 4;
 }
-public static class ArmConstants
+public static class GameConstants
 {
-    public static int MaxNumberOfCards = 10;
+    public static int PlayerStartHealth = 30;
+    public static int StartHandNumberOfCards = 8;
+    public static int MaxNumberOfCardsInHand = 12;
+}
+public static class PlayerLibraryConstants
+{
+
 }

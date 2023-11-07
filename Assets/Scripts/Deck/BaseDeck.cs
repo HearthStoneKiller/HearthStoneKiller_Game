@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [Serializable]public class BaseDeck : MonoBehaviour
 {
-    [Header("Cards")]
-    [SerializeField]private List<BaseCard> baseCards = new List<BaseCard>();
+    private List<BaseCard> baseCards = new List<BaseCard>();
     public BaseDeck()
     {
         baseCards = new List<BaseCard>();

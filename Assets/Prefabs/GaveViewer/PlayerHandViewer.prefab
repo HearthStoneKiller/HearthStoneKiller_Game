@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ef151a1809fa3f44aa5703912cdc6fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHand: {fileID: 0}
+  creatureCard: {fileID: 2523749720265621289, guid: da85f7a452c5e7749b096e9a9016f128, type: 3}
+  spellCard: {fileID: 6906364047036153354, guid: 3ae1fded9c67a86469e7527aae49102d, type: 3}
+  parametersCard: {fileID: 6476011551896196604, guid: b6264e1dd3173ae4a93910dc423f31e8, type: 3}
+  propertyCard: {fileID: 5315862090492901809, guid: 95f19591261104d48a29391739ea6b7e, type: 3}

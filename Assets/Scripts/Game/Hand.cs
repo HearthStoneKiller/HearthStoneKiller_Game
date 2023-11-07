@@ -2,16 +2,28 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hand : MonoBehaviour
+[Serializable]public class Hand : MonoBehaviour
 {
-    private List<Card> cards;
-    private void Start()
+    private List<Card> cards = new List<Card>();
+    private void Start() 
     {
-        cards = new List<Card>();
+        
     }
     private void Update()
     {
         
+    }
+    public int GetCount()
+    {
+        return cards.Count;
+    }
+    public Card GetCard(int index)
+    {
+        if (index < 0 || index >= cards.Count)
+        {
+            throw new IndexOutOfRangeException();
+        }
+        return cards[index];
     }
     public void AddCard(Card card)
     {
@@ -39,6 +51,6 @@ public class Hand : MonoBehaviour
     }
     public bool IsHandFool()
     {
-        return cards.Count == ArmConstants.MaxNumberOfCards;
+        return cards.Count >= GameConstants.MaxNumberOfCardsInHand;
     }
 }
