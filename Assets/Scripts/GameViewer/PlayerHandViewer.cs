@@ -14,13 +14,12 @@ using System;
     void Start()
     {
         cards = new List<GameObject>();
+        
         cards.Add(Instantiate(creatureCard, new Vector3(125, 0, 30), new Quaternion()));
-        Debug.Log(playerHand.GetCount());
-        for (int i = 0; i < playerHand.GetCount(); i++)
-        {
-            AddCard(playerHand.GetCard(i));
-            Debug.LogWarning(cards[i].GetComponent<Card>().GetName());
-        }
+        cards[0].GetComponent<CreatureCardViewer>().SetCreatureCard(1007);
+        //cards.Add(Instantiate(spellCard, new Vector3(125, 0, 30), new Quaternion()));
+        //cards.Add(Instantiate(parametersCard, new Vector3(125, 0, 30), new Quaternion()));
+        //cards.Add(Instantiate(propertyCard, new Vector3(125, 0, 30), new Quaternion()));
     }
     void Update()
     {

@@ -13,5 +13,5 @@ public static class GameConstants
 }
 public static class PlayerLibraryConstants
 {
-
+    public static int MaxNumberOfCardRepeats = 4;
 }

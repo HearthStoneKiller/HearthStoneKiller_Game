@@ -7,31 +7,35 @@ using UnityEngine;
     [SerializeField]private int maxHealth;
     private int currentHealth;
     private int attackDamage;
-    private List<ParametersTypes> parametersTypes;
-    public ParametersCard(string name, int maxHealth, int attackDamage, string parametersTypes): base(name)
+    private List<ParametersType> parametersTypes;
+    public ParametersCard(int id, string name, int manaCost, CardRarity rarity, int maxHealth, int attackDamage, List<ParametersType> parametersTypes): base(id, name, manaCost, rarity)
     {
         this.maxHealth = maxHealth;
         this.currentHealth = maxHealth;
         this.attackDamage = attackDamage;
-        this.parametersTypes = new List<ParametersTypes>();
-        SetParametersTypes(parametersTypes);
+        this.parametersTypes = parametersTypes;
     }
-    private void SetParametersTypes(string parametersTypes)
+    public ParametersCard(int id, string name, int manaCost, CardRarity rarity, string description, int maxHealth, int attackDamage, List<ParametersType> parametersTypes): base(id, name, manaCost, rarity, description)
     {
-        string[] strings = parametersTypes.Split(new char[] {'/'});
-        foreach (var str in strings)
-        {
-            switch (str)
-            {
-                case "NO_PARAMETER":
-                break;
-                case "POISON":
-                    this.parametersTypes.Add(ParametersTypes.POISON);
-                break;
-                case "SHIELD":
-                    this.parametersTypes.Add(ParametersTypes.SHIELD);
-                break;
-            }
-        }
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth;
+        this.attackDamage = attackDamage;
+        this.parametersTypes = parametersTypes;
+    }
+    public int GetMaxHealth()
+    {
+        return maxHealth;
+    }
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+    public int GetAttackDamage()
+    {
+        return attackDamage;
+    }
+    public List<ParametersType> GetParameters()
+    {
+        return parametersTypes;
     }
 }

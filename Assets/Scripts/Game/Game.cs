@@ -39,17 +39,18 @@ using UnityEngine;
         currentGamePhase = GamePhase.START_GAME_PHASE;
         //
 
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(51));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(101));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(151));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(2001));
+        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(2001));
 
-        secondPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1));
+        secondPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
 
-        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1));
-        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(51));
-        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(101));
-        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(151));
+        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(3001));
+        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(3001));
+        
     }
     void Update()
     {

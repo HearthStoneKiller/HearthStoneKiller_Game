@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 [Serializable]public class Deck : MonoBehaviour
 {
+    [SerializeField]private int id;
     [SerializeField]private BaseDeck baseDeck;
     [SerializeField]private ModDeck modDeck;
     public void SetBaseDeck()
