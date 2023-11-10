@@ -40,7 +40,7 @@ using UnityEngine.UI;
         {
             parametersPrefab.GetComponent<Image>().sprite = CalculateSprite(creatureCard.GetParameters()[i]);
             parametersGameObjects.Add(Instantiate(parametersPrefab, new Vector3(0,0,-1), this.transform.rotation));
-            parametersGameObjects[i].transform.Rotate(-90f, 0f, 0f);
+            parametersGameObjects[i].transform.Rotate(90f, 0f, 180f);
             parametersGameObjects[i].transform.SetParent(parameters.transform);
         }
     }

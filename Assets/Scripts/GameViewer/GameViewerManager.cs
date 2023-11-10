@@ -15,11 +15,25 @@ using UnityEngine;
     [SerializeField]private GameObject propertyCard;
     void Start()
     {
-        
+        firstPlayerScreenViewer.SetPlayers(firstPlayer, secondPlayer);
+        secondPlayerScreenViewer.SetPlayers(secondPlayer, firstPlayer);
     }
 
     void Update()
     {
         
+    }
+    public void SetFirstPlayer(Player player)
+    {
+        this.firstPlayer = player;
+    }
+    public void SetSecondPlayer(Player player)
+    {
+        this.secondPlayer = player;
+    }
+    public void SetPlayers(Player firstPlayer, Player secondPlayer)
+    {
+        this.firstPlayer = firstPlayer;
+        this.secondPlayer = secondPlayer;
     }
 }

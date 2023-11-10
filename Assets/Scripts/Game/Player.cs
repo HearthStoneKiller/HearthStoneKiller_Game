@@ -17,4 +17,8 @@ using UnityEngine;
     {
 
     }
+    public Hand GetHand()
+    {
+        return hand;
+    }
 }

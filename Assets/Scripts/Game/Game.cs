@@ -28,6 +28,7 @@ using UnityEngine;
         secondPlayer = Instantiate(playerPrefab, new Vector3(0,0,0), new Quaternion());
 
         gameViewer = Instantiate(gameViewerPrefab, new Vector3(0,0,0), new Quaternion());
+        gameViewer.GetComponent<GameViewerManager>().SetPlayers(firstPlayer.GetComponent<Player>(),secondPlayer.GetComponent<Player>());
         //
 
         // Игрокам назначаются стартовые значения здоровья
@@ -40,17 +41,15 @@ using UnityEngine;
         //
 
         firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(2001));
-        firstPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(2001));
-
         secondPlayer.transform.GetChild(0).GetComponent<Deck>().AddCard(CardCollection.GetCard(1001));
 
-        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(3001));
-        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(3001));
-        
+        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1002));
+        firstPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1007));
+
+        secondPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1006));
+        secondPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1007));
+        secondPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1008));
+        secondPlayer.transform.GetChild(1).GetComponent<Hand>().AddCard(CardCollection.GetCard(1009));
     }
     void Update()
     {

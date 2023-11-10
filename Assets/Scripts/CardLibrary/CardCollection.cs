@@ -14,10 +14,10 @@ public static class CardCollection
         {1003, new CreatureCard(1003, "Demon", 4, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
         {1004, new CreatureCard(1004, "Angel", 5, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
         {1005, new CreatureCard(1005, "Cat", 2, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
-        {1006, new CreatureCard(1006, "Zombie", 3, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
+        {1006, new CreatureCard(1006, "Zombie", 3, CardRarity.COMMON, 6, 5, new List<ParametersType>() {ParametersType.HZ2}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
         {1007, new CreatureCard(1007, "Dragon", 5, CardRarity.LEGENDARY, 6, 5, new List<ParametersType>() {ParametersType.MASS_ATTACK, ParametersType.TEMPORARY}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
-        {1008, new CreatureCard(1008, "Bear", 4, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
-        {1009, new CreatureCard(1009, "Snake", 3, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
+        {1008, new CreatureCard(1008, "Bear", 4, CardRarity.COMMON, 6, 5, new List<ParametersType>() {ParametersType.SHIELD, ParametersType.BLEEDING}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
+        {1009, new CreatureCard(1009, "Snake", 3, CardRarity.COMMON, 6, 5, new List<ParametersType>() {ParametersType.TRAP, ParametersType.HEALING}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
         {1010, new CreatureCard(1010, "Rat", 1, CardRarity.COMMON, 6, 5, new List<ParametersType>() {}, TriggerType.NO_TRIGGER, TargetType.NO_TARGET, EffectType.NO_EFFECT, 0)},
 
         //{id, new SpellCard(int id, string name, int manaCost, CardRarity rarity, TargetType spellCardTargetType, EffectType spellCardEffectType, int effectValue)}

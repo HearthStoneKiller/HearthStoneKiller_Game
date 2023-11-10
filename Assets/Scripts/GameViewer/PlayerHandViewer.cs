@@ -15,11 +15,11 @@ using System;
     {
         cards = new List<GameObject>();
         
-        cards.Add(Instantiate(creatureCard, new Vector3(125, 0, 30), new Quaternion()));
-        cards[0].GetComponent<CreatureCardViewer>().SetCreatureCard(1007);
-        //cards.Add(Instantiate(spellCard, new Vector3(125, 0, 30), new Quaternion()));
-        //cards.Add(Instantiate(parametersCard, new Vector3(125, 0, 30), new Quaternion()));
-        //cards.Add(Instantiate(propertyCard, new Vector3(125, 0, 30), new Quaternion()));
+        for(int i = 0; i < playerHand.GetCount();i++)
+        {
+            cards.Add(Instantiate(creatureCard, this.transform.position, new Quaternion()));
+            cards[i].GetComponent<CreatureCardViewer>().SetCreatureCard(playerHand.GetCard(i).GetId());
+        }
     }
     void Update()
     {
@@ -47,5 +47,9 @@ using System;
         {
             cards.Add(Instantiate(propertyCard, new Vector3(125, 0, 30), new Quaternion()));
         }
+    }
+    public void SetPlayerHand(Hand playerHand)
+    {
+        this.playerHand = playerHand;
     }
 }
